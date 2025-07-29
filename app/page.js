@@ -13,7 +13,7 @@ export default function Home() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch('https://feedback-backend-hkqy.onrender.com/api/me', {
+        const res = await fetch('https://feedback-backend-2-jd86.onrender.com/api/me', {
           credentials: 'include',
         });
         if (res.ok) {
@@ -117,7 +117,7 @@ export default function Home() {
                 {user ? (
                   <button
                     onClick={async () => {
-                      await fetch('https://feedback-backend-hkqy.onrender.com/api/logout', {
+                      await fetch('https://feedback-backend-2-jd86.onrender.com/api/logout', {
                         method: 'POST',
                         credentials: 'include',
                       });
