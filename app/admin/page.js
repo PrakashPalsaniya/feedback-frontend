@@ -25,7 +25,7 @@ export default function AdminDashboard() {
   const [analysis, setAnalysis] = useState({});
   const [analyzingId, setAnalyzingId] = useState(null);
 
-  const BASE_URL = '';
+  const BASE_URL = 'https://feedback-backend-3-0hi9.onrender.com';
 
   useEffect(() => {
     const fetchDashboard = async () => {
