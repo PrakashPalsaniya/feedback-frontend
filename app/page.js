@@ -9,11 +9,11 @@ export default function Home() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [user, setUser] = useState(null);
-
+  const BASE_URL ='https://feedback-backend-3-0hi9.onrender.com';
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch('https://feedback-backend-2-jd86.onrender.com/api/me', {
+        const res = await fetch(`${BASE_URL}/api/me`, {
           credentials: 'include',
         });
         if (res.ok) {
@@ -74,7 +74,7 @@ export default function Home() {
                   <span className="text-gray-700 font-medium">Hi, {user.firstName}</span>
                   <button
                     onClick={async () => {
-                      await fetch('https://feedback-backend-hkqy.onrender.com/api/logout', {
+                      await fetch(`${BASE_URL}/api/logout`, {
                         method: 'POST',
                         credentials: 'include',
                       });
@@ -117,7 +117,7 @@ export default function Home() {
                 {user ? (
                   <button
                     onClick={async () => {
-                      await fetch('https://feedback-backend-2-jd86.onrender.com/api/logout', {
+                      await fetch(`${BASE_URL}/api/logout`, {
                         method: 'POST',
                         credentials: 'include',
                       });
