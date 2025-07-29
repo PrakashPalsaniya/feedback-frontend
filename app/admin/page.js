@@ -25,10 +25,12 @@ export default function AdminDashboard() {
   const [analysis, setAnalysis] = useState({});
   const [analyzingId, setAnalyzingId] = useState(null);
 
+  const BASE_URL = '';
+
   useEffect(() => {
     const fetchDashboard = async () => {
       try {
-        const res = await fetch("https://feedback-backend-2-jd86.onrender.com/api/admin/dashboard", {
+        const res = await fetch(`${BASE_URL}/api/admin/dashboard`, {
           method: "GET",
           credentials: "include",
           headers: {
@@ -66,7 +68,7 @@ export default function AdminDashboard() {
   const handleDeleteFeedback = async (id) => {
     try {
       const res = await fetch(
-        `https://feedback-backend.railway.internal/api/admin/feedback/${id}`,
+        `${BASE_URL}/api/admin/feedback/${id}`,
         {
           method: "DELETE",
           credentials: "include",
@@ -85,7 +87,7 @@ export default function AdminDashboard() {
   const handleAnalyze = async (id, content) => {
     setAnalyzingId(id);
     try {
-      const res = await fetch("https://feedback-backend-2-jd86.onrender.com/api/analyze-sentiment", {
+      const res = await fetch(`${BASE_URL}/api/analyze-sentiment`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
