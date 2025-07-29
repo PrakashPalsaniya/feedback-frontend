@@ -34,7 +34,7 @@ export default function SignupPage() {
     setIsLoading(true);
 
     try {
-      const res = await fetch('https://feedback-backend-hkqy.onrender.com/api/register', {
+      const res = await fetch('https://feedback-backend-2-jd86.onrender.com/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
