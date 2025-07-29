@@ -14,7 +14,7 @@ export default function FeedbackFormPage() {
   const [error, setError] = useState('');
   const router = useRouter();
 
-  const BASE_URL = '';
+  const BASE_URL = 'https://feedback-backend-3-0hi9.onrender.com';
   const categories = [
     { value: 'general', label: 'General Feedback' },
     { value: 'bug', label: 'Bug Report' },
