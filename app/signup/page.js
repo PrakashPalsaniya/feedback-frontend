@@ -13,6 +13,8 @@ export default function SignupPage() {
     password: '',
     confirmPassword: ''
   });
+
+  const BASE_URL ='';
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -34,7 +36,7 @@ export default function SignupPage() {
     setIsLoading(true);
 
     try {
-      const res = await fetch('https://feedback-backend-2-jd86.onrender.com/api/register', {
+      const res = await fetch(`${BASE_URL}/api/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
