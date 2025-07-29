@@ -42,7 +42,7 @@ export default function FeedbackFormPage() {
   setIsSubmitting(true);
 
   try {
-    const res = await fetch('https://feedback-backend-hkqy.onrender.com/api/feedback', {
+    const res = await fetch('https://feedback-backend-2-jd86.onrender.com/api/feedback', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
