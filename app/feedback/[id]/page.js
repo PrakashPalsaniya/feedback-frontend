@@ -14,6 +14,7 @@ export default function FeedbackFormPage() {
   const [error, setError] = useState('');
   const router = useRouter();
 
+  const BASE_URL = '';
   const categories = [
     { value: 'general', label: 'General Feedback' },
     { value: 'bug', label: 'Bug Report' },
@@ -42,7 +43,7 @@ export default function FeedbackFormPage() {
   setIsSubmitting(true);
 
   try {
-    const res = await fetch('https://feedback-backend-2-jd86.onrender.com/api/feedback', {
+    const res = await fetch(`${BASE_URL}/api/feedback`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
