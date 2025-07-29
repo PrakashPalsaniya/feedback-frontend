@@ -10,13 +10,13 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-
+  const BASE_URL ='';
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
 
     try {
-      const res = await fetch('https://feedback-backend-2-jd86.onrender.com/api/login', {
+      const res = await fetch(`${BASE_URL}/api/login`, {
         credentials: 'include',
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
