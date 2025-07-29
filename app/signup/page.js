@@ -14,7 +14,7 @@ export default function SignupPage() {
     confirmPassword: ''
   });
 
-  const BASE_URL ='';
+  const BASE_URL ='https://feedback-backend-3-0hi9.onrender.com';
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
