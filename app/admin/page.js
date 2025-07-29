@@ -28,7 +28,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     const fetchDashboard = async () => {
       try {
-        const res = await fetch("https://feedback-backend.railway.internal/api/admin/dashboard", {
+        const res = await fetch("https://feedback-backend-2-jd86.onrender.com/api/admin/dashboard", {
           method: "GET",
           credentials: "include",
           headers: {
@@ -85,7 +85,7 @@ export default function AdminDashboard() {
   const handleAnalyze = async (id, content) => {
     setAnalyzingId(id);
     try {
-      const res = await fetch("https://feedback-backend-hkqy.onrender.com/api/analyze-sentiment", {
+      const res = await fetch("https://feedback-backend-2-jd86.onrender.com/api/analyze-sentiment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
